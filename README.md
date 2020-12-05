@@ -31,7 +31,7 @@
 由于redis的cluster最低需要6个node。该值不能低于6。且最好是双数。
 当然，这个值可以保持不动。
 
-执行该命令：d to initialize the directory with the module in it.  This makes the module aware of the OCI provider.  You can do this by running:
+执行该命令：
 
     terraform init
 
@@ -53,7 +53,6 @@
 
     terraform apply
 
-You'll need to enter `yes` when prompted.
 由于该命令不能撤销，途中会需要提示输入`yes`：  
 ![](./images/0.terraform-apply-yes.png)
 
