@@ -17,19 +17,14 @@
 ## 配置基本参数
 当前目录应该是oci-redis-cluster/terraform，该目录下有一个配置文件terraform.tfvars,应该需要配置如下参数，该参数如何获取参见“前提条件”
 
-tenancy_ocid = "ocid1.tenancy.oc1....."
+    tenancy_ocid = "ocid1.tenancy.oc1....."
+    user_ocid = "ocid1.user.oc1....."
+    fingerprint= "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+    private_key_path = "/path/oci_api_key_public.pem"
+    region = "ap-seoul-1" # 所在的region
+    compartment_ocid = "ocid1.compartment.oc1....."
+    ssh_public_key="ssh-rsa AAA... ... xxx@localhost"
 
-user_ocid = "ocid1.user.oc1....."
-
-fingerprint= "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
-
-private_key_path = "/path/oci_api_key_public.pem"
-
-region = "ap-seoul-1" # 所在的region
-
-compartment_ocid = "ocid1.compartment.oc1....."
-
-ssh_public_key="ssh-rsa AAA... ... xxx@localhost"
 
 ## 初始化 Terraform
 默认情况下，应该回创建6个node。如果需要修改该值可以`variables.tf`文件中`instance_count`值.
